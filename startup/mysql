@@ -1,0 +1,36 @@
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+   username VARCHAR(255) NOT NULL UNIQUE,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  otp VARCHAR(50) NOT NULL,
+  expirationDate VARCHAR(50) NOT NULL,
+  isActive VARCHAR(50) NOT NULL DEFAULT '0',
+  role_id INT NOT NULL
+);
+
+
+-- CREATE TABLE roles (
+--   id INT AUTO_INCREMENT PRIMARY KEY,
+--   name VARCHAR(255) NOT NULL,
+--   UNIQUE KEY `unique_name` (name)
+-- );
+
+-- CREATE TABLE users (
+--   id INT AUTO_INCREMENT PRIMARY KEY,
+--   role_id INT NOT NULL,
+--   username VARCHAR(255) NOT NULL UNIQUE,
+--   firstname VARCHAR(255) NOT NULL,
+--   lastname VARCHAR(255) NOT NULL,
+--   email VARCHAR(255) NOT NULL UNIQUE,
+--   password VARCHAR(255) NOT NULL,
+--   otp VARCHAR(50) NOT NULL,
+--   expirationDate VARCHAR(50) NOT NULL,
+--   isActive VARCHAR(50) NOT NULL DEFAULT '0',
+--   FOREIGN KEY (role_id) REFERENCES roles(id)
+-- );
+
+
+
+
+
